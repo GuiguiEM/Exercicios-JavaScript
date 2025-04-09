@@ -39,3 +39,45 @@ h1{
 .branco{
     background-color: white;
 }
+
+.expandir{
+    width: 124px;
+    height: 124px;
+}
+
+.circulo{
+    border-radius: 50%;
+}
+
+.sumir{
+    opacity: 0%;
+}
+
+.diminuir{
+    width: 76px;
+    height: 76px;
+}
+
+.triangulo{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid;
+    background-color: transparent;  
+}
+
+.inverter{
+    order: -1;
+}
+
+.girar{
+    transform: rotate(180deg);
+}
+
+@keyframes pulse{
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.pulsar{
+    animation: pulse 0.8s infinite;
+}
