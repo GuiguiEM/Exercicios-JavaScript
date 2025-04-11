@@ -41,8 +41,7 @@ h1{
 }
 
 .expandir{
-    width: 124px;
-    height: 124px;
+    scale: 1.24;
 }
 
 .circulo{
@@ -54,8 +53,7 @@ h1{
 }
 
 .diminuir{
-    width: 76px;
-    height: 76px;
+    scale: 0.74;
 }
 
 .triangulo{
