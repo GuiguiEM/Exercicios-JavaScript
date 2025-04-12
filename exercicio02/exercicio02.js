@@ -3,6 +3,7 @@
 const botaoSomar = document.getElementById('somar')
 const botaoIdentificar = document.getElementById('identificar')
 const botaoMedia = document.getElementById('media')
+const botaoInteiro = document.getElementById('inteiro')
 
 function somar (){
     const numero1 = parseInt(document.getElementById('numero1').value)
@@ -47,6 +48,17 @@ function media(){
     
 }
 
+function calcularInteiro() {
+    const valor = Number(document.getElementById('valor-inteiro').value);
+
+    if (valor % 2 === 0) {
+        parOuimpar.textContent = 'PAR'
+    } else {
+        parOuimpar.textContent = 'ÍMPAR'
+    }
+}
+
 botaoSomar.addEventListener('click', somar)
 botaoIdentificar.addEventListener('click', identificar)
 botaoMedia.addEventListener('click', media)
+botaoInteiro.addEventListener('click', calcularInteiro);
