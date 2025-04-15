@@ -34,7 +34,7 @@ const contatos = [
         contato: 'Guigui'
     },
     {
-        nome: 'Rudies flacko',
+        nome: 'Rudies',
         mensagem: 'como q vou ficar broke???',
         notificacoes: '6',
         tempo: 'Há 2 horas',

@@ -138,21 +138,35 @@ function mostrarTriplo() {
     }
 }
 
-// function mostrarPrimo() {
-//     const numeros = document.getElementById('numeros').value.split(',')
-//     const container = document.getElementById('container-primo')
+function mostrarPrimo() {
+    const numeros = document.getElementById('numeros').value.split(',').map(n => parseInt(n.trim()))
+    const container = document.getElementById('container-primo')
+    
+    container.replaceChildren()
 
-//     container.replaceChildren('')
-//     const ultimoIndice = numeros.length
+    for (let i = 0; i < numeros.length; i++) {
+        const n = numeros[i]
 
-//     for (let contador = 0; contador < ultimoIndice; contador++) {
-//         if (numeros[contador] % 1 == 0 && numeros[contador] % (numeros[contador]) == 0) {
-//             const novoSpan = document.createElement('span')
-//             novoSpan.textContent = numeros[contador] - 1
-//             container.appendChild(novoSpan)
-//         }
-//     }
-// }
+        let primo = true
+        if (n <= 1) {
+            primo = false
+        } else {
+            for (let j = 2; j <= Math.sqrt(n); j++) {
+                if (n % j === 0) {
+                    primo = false
+                    break
+                }
+            }
+        }
+
+        if (primo) {
+            const span = document.createElement('span')
+            span.textContent = n + ' '
+            container.appendChild(span)
+        }
+    }
+}
+
 botaoMostrarNumeros.addEventListener('click', mostrarTodosNumeros)
 botaoNumerosPares.addEventListener('click', mostrarNumerosPares)
 botaoNumerosImpares.addEventListener('click', mostrarNumerosImpares)
