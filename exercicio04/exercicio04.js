@@ -40,6 +40,14 @@ const contatos = [
         tempo: 'Há 2 horas',
         foto: 'rudies.jfif',
         contato: 'Guigui'
+    },
+    {
+        nome: 'Alee',
+        mensagem: 'A rua anda tensa',
+        notificacoes: '4',
+        tempo: 'Há 3 horas',
+        foto: 'alee.jpg',
+        contato: 'Guigui'
     }
 ]
 
